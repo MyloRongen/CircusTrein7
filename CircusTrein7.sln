@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircusTrein7", "CircusTrein7\CircusTrein7.csproj", "{082CB093-FC6A-4E67-887D-CFF6469D0259}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryCircus", "ClassLibraryCircus\ClassLibraryCircus.csproj", "{904A0662-AB76-4A5B-A46D-C2533CF31AB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTrainCircus", "TestTrainCircus\TestTrainCircus.csproj", "{DA43D496-F709-4520-9A6A-FA27F461088E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{082CB093-FC6A-4E67-887D-CFF6469D0259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{082CB093-FC6A-4E67-887D-CFF6469D0259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{082CB093-FC6A-4E67-887D-CFF6469D0259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{082CB093-FC6A-4E67-887D-CFF6469D0259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{904A0662-AB76-4A5B-A46D-C2533CF31AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{904A0662-AB76-4A5B-A46D-C2533CF31AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{904A0662-AB76-4A5B-A46D-C2533CF31AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{904A0662-AB76-4A5B-A46D-C2533CF31AB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA43D496-F709-4520-9A6A-FA27F461088E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA43D496-F709-4520-9A6A-FA27F461088E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA43D496-F709-4520-9A6A-FA27F461088E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA43D496-F709-4520-9A6A-FA27F461088E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
