@@ -10,7 +10,7 @@ namespace ClassLibraryCircus.Classes
 {
     public class Wagon
     {
-        public readonly List<Animal> Animals = new();
+        private readonly List<Animal> Animals = new();
         
         public bool AnimalFitsSafelyInWagon(Animal animal)
         {

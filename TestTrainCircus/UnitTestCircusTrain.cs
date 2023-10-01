@@ -41,8 +41,7 @@ public class Tests
         Train train = new();
 
         train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
-        
-        
+              
         train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Small));
         train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Small));
         train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Small));

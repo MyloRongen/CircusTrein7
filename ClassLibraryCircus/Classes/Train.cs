@@ -14,32 +14,38 @@ namespace ClassLibraryCircus.Classes
 
         public void SortAnimals()
         {
-            List<Animal> sortedAnimals = Animals.OrderBy(a => a.Type == AnimalType.Carnivore ? 0 : 1).ToList();
+            List<Animal> sortedAnimals = SortAnimalsByType();
 
             foreach (Animal animal in sortedAnimals)
             {
-                bool hasBeenAddedToWagon = false;
-                
-                foreach (Wagon wagon in Wagons)
-                {
-                    if (wagon.AnimalFitsSafelyInWagon(animal))
-                    {
-                        wagon.AddAnimalToWagon(animal);
-                        hasBeenAddedToWagon = true;
-                        break;
-                    }
-                }
-
-                if (!hasBeenAddedToWagon)
+                if (!TryAddAnimalToWagon(animal))
                 {
                     AddNewWagonToTrain(animal);
                 }
             }
         }
-        
+
+        private bool TryAddAnimalToWagon(Animal animal)
+        {
+            foreach (Wagon wagon in Wagons)
+            {
+                if (wagon.AnimalFitsSafelyInWagon(animal))
+                {
+                    wagon.AddAnimalToWagon(animal);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private List<Animal> SortAnimalsByType()
+        {
+            return Animals.OrderBy(a => a.Type == AnimalType.Carnivore ? 0 : 1).ToList();
+        }
+
         private void AddNewWagonToTrain(Animal animal)
         {
-            Wagon newWagon = new Wagon();
+            Wagon newWagon = new();
             newWagon.AddAnimalToWagon(animal);
             Wagons.Add(newWagon);
         }
