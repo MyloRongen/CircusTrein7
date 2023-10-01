@@ -13,16 +13,16 @@ namespace ClassLibraryCircus.Classes
 
         public static void MakeDummyContentAnimals(Train train)
         {
-            train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
-            train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
-            train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+            train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+            train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+            train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
 
-            train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
-            train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
-            train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+            train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+            train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+            train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
 
-            train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-            train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+            train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+            train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
         }
 
         private void MakeAnimals(Train train)

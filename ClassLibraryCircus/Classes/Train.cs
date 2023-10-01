@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClassLibraryCircus.Enums;
+using static System.Collections.Specialized.BitVector32;
 
 namespace ClassLibraryCircus.Classes
 {
     public class Train
     {
-        public readonly List<Wagon> Wagons = new();
-        public readonly List<Animal> Animals = new();
+        private readonly List<Wagon> Wagons = new();
+        private readonly List<Animal> Animals = new();
 
         public void SortAnimals()
         {
@@ -48,6 +49,21 @@ namespace ClassLibraryCircus.Classes
             Wagon newWagon = new();
             newWagon.AddAnimalToWagon(animal);
             Wagons.Add(newWagon);
+        }
+
+        public List<Wagon> GetWagonsFromTrain()
+        {
+            return Wagons;
+        }
+
+        public List<Animal> GetAnimalsFromTrain()
+        {
+            return Animals;
+        }
+
+        public void AddAnimalToTrain(Animal animal)
+        {
+            Animals.Add(animal);
         }
     }
 }

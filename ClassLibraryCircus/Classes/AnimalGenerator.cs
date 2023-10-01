@@ -13,7 +13,7 @@ public class AnimalGenerator
             AnimalSize animalSize = SetSize();
             AnimalType animalType = SetType();
             Animal animal = new(animalType, animalSize);
-            train.Animals.Add(animal);
+            train.AddAnimalToTrain(animal);
         }
     }
 

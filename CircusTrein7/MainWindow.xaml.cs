@@ -37,7 +37,7 @@ namespace CircusTrein7
         {
             InitializeAnimal.MakeDummyContentAnimals(_train);
 
-            foreach (Animal animal in _train.Animals)
+            foreach (Animal animal in _train.GetAnimalsFromTrain())
             {
                 _ = AnimalList.Items.Add(animal.Size + " " + animal.Type + " points " + animal.Point);
             }
@@ -52,12 +52,12 @@ namespace CircusTrein7
         private void DisplayAnimalsInTrains()
         {
             string collectionContents = "";
-            foreach (Wagon wagon in _train.Wagons)
+            foreach (Wagon wagon in _train.GetWagonsFromTrain())
             {
                 collectionContents += "Wagon has: ";
                 collectionContents += "\n";
 
-                foreach (Animal animal in wagon.Animals)
+                foreach (Animal animal in wagon.GetAnimalsFromWagon())
                 {
                     collectionContents += "Animal type: " + animal.Type + ", Animal size: " + animal.Size + ", Animal point: " + animal.Point + ", ";
                     collectionContents = collectionContents.TrimEnd(',', ' ');

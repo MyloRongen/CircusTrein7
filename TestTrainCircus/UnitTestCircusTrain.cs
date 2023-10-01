@@ -17,17 +17,17 @@ public class Tests
         // Arrange
         Train train = new();
 
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
         
         train.SortAnimals();
         
         // Act
-        int actualCount = train.Wagons.Count;
+        int actualCount = train.GetWagonsFromTrain().Count;
 
         // Assert
         Assert.That(actualCount, Is.EqualTo(2));
@@ -40,23 +40,23 @@ public class Tests
         // Arrange
         Train train = new();
 
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
               
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Small));
         
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
         
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
         
         train.SortAnimals();
         
         // Act
-        int actualCount = train.Wagons.Count;
+        int actualCount = train.GetWagonsFromTrain().Count;
 
         // Assert
         Assert.That(actualCount, Is.EqualTo(2));
@@ -68,18 +68,18 @@ public class Tests
         // Arrange
         Train train = new();
 
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Large));
         
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
         
         train.SortAnimals();
         
         // Act
-        int actualCount = train.Wagons.Count;
+        int actualCount = train.GetWagonsFromTrain().Count;
 
         // Assert
         Assert.That(actualCount, Is.EqualTo(4));
@@ -91,23 +91,23 @@ public class Tests
         // Arrange
         Train train = new();
 
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Large));
 
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
         
         train.SortAnimals();
         
         // Act
-        int actualCount = train.Wagons.Count;
+        int actualCount = train.GetWagonsFromTrain().Count;
 
         // Assert
         Assert.That(actualCount, Is.EqualTo(5));
@@ -119,17 +119,17 @@ public class Tests
         // Arrange
         Train train = new();
 
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
 
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
         
         train.SortAnimals();
         
         // Act
-        int actualCount = train.Wagons.Count;
+        int actualCount = train.GetWagonsFromTrain().Count;
 
         // Assert
         Assert.That(actualCount, Is.EqualTo(2));
@@ -141,21 +141,21 @@ public class Tests
         // Arrange
         Train train = new();
 
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
 
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
 
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
         
         train.SortAnimals();
         
         // Act
-        int actualCount = train.Wagons.Count;
+        int actualCount = train.GetWagonsFromTrain().Count;
 
         // Assert
         Assert.That(actualCount, Is.EqualTo(3));
@@ -167,38 +167,38 @@ public class Tests
         // Arrange
         Train train = new();
 
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
         
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
         
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Large));
         
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
         
         train.SortAnimals();
         
         // Act
-        int actualCount = train.Wagons.Count;
+        int actualCount = train.GetWagonsFromTrain().Count;
 
         // Assert
         Assert.That(actualCount, Is.EqualTo(13));
@@ -210,23 +210,23 @@ public class Tests
         // Arrange
         Train train = new();
         
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
         
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
         
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
         
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Large));
 
         train.SortAnimals();
         
         // Act
-        int actualCount = train.Wagons.Count;
+        int actualCount = train.GetWagonsFromTrain().Count;
 
         // Assert
         Assert.That(actualCount, Is.EqualTo(6));
@@ -238,37 +238,37 @@ public class Tests
         // Arrange
         Train train = new();
         
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Small));
         
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Medium));
         
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Herbivore, AnimalSize.Large));
         
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Small));
         
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Medium));
 
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Large));
-        train.Animals.Add(new Animal(AnimalType.Carnivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Large));
+        train.AddAnimalToTrain(new Animal(AnimalType.Carnivore, AnimalSize.Large));
 
         train.SortAnimals();
         
         // Act
-        int actualCount = train.Wagons.Count;
+        int actualCount = train.GetWagonsFromTrain().Count;
 
         // Assert
         Assert.That(actualCount, Is.EqualTo(8));

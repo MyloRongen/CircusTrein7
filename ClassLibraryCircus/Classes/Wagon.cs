@@ -47,5 +47,10 @@ namespace ClassLibraryCircus.Classes
         {
             return wagon.Sum(animal => animal.Point);
         }
+
+        public List<Animal> GetAnimalsFromWagon()
+        {
+            return Animals;
+        }
     }
 }
