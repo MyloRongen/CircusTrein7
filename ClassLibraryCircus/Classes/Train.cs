@@ -30,12 +30,12 @@ namespace ClassLibraryCircus.Classes
         {
             foreach (Wagon wagon in Wagons)
             {
-                if (wagon.AnimalFitsSafelyInWagon(animal))
+                if (wagon.TryAddAnimalInWagon(animal))
                 {
-                    wagon.AddAnimalToWagon(animal);
                     return true;
                 }
             }
+
             return false;
         }
 
@@ -47,7 +47,7 @@ namespace ClassLibraryCircus.Classes
         private void AddNewWagonToTrain(Animal animal)
         {
             Wagon newWagon = new();
-            newWagon.AddAnimalToWagon(animal);
+            newWagon.TryAddAnimalInWagon(animal);
             Wagons.Add(newWagon);
         }
 

@@ -12,27 +12,28 @@ namespace ClassLibraryCircus.Classes
     {
         private readonly List<Animal> Animals = new();
         
-        public bool AnimalFitsSafelyInWagon(Animal animal)
+        public bool TryAddAnimalInWagon(Animal animal)
         {
             if (AnimalIsLargerThanWagonCanContain(animal))
             {
                 return false;
             }
 
-            if (Animal.GetsEatenByOtherAnimal(animal, Animals))
+            if (animal.GetsEatenByOtherAnimal(Animals))
             {
                 return false;
             }
 
-            if (Animal.CanEatAnimal(animal, Animals))
+            if (animal.CanEatAnimal(Animals))
             {
                 return false;
             }
-            
+
+            AddAnimalToWagon(animal);
             return true;
         }
         
-        public void AddAnimalToWagon(Animal animal)
+        private void AddAnimalToWagon(Animal animal)
         {
             Animals.Add(animal);
         }
@@ -43,9 +44,9 @@ namespace ClassLibraryCircus.Classes
             return animal.Point + wagonCapacity > 10;
         }
 
-        private static int GetWagonCapacity(List<Animal> wagon)
+        private static int GetWagonCapacity(List<Animal> animals)
         {
-            return wagon.Sum(animal => animal.Point);
+            return animals.Sum(animal => animal.Point);
         }
 
         public List<Animal> GetAnimalsFromWagon()

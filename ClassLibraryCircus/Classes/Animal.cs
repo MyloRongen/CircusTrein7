@@ -19,16 +19,16 @@ namespace ClassLibraryCircus.Classes
             Size = size;
         }
         
-        public static bool GetsEatenByOtherAnimal(Animal animal, List<Animal> animalsInWagon)
+        public bool GetsEatenByOtherAnimal(List<Animal> animalsInWagon)
         {
-            return animalsInWagon.Any(a => a.Type == AnimalType.Carnivore && animal.Point <= a.Point);
+            return animalsInWagon.Any(a => a.Type == AnimalType.Carnivore && Point <= a.Point);
         }
     
-        public static bool CanEatAnimal(Animal animal, List<Animal> animalsInWagon)
+        public bool CanEatAnimal(List<Animal> animalsInWagon)
         {
-            if (animal.Type == AnimalType.Carnivore)
+            if (Type == AnimalType.Carnivore)
             {
-                return animalsInWagon.Any(a => a.Point <= animal.Point);
+                return animalsInWagon.Any(a => a.Point <= Point);
             }
             
             return false;
